@@ -1,0 +1,394 @@
+@accent: #54b4b7;
+@divPad: 5px;
+@font-size: 14px;
+@font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+@text-color: #555558;
+@circle-width : 65px;
+@circle-height : 65px;
+@dot-width: 10px;
+@dot-height: 10px;
+@response-image-height : 100px;
+
+@xs-min: 200px;
+@sm-min: 768px;
+@md-min: 992px;
+@lg-min: 1200px;
+
+@xs-max: (@sm-min - 1);
+@sm-max: (@md-min - 1);
+@md-max: (@lg-min - 1);
+
+@phone:   ~"only screen and (min-width: @{xs-min}) and (max-width: @{xs-max})";
+@tablet:  ~"only screen and (min-width: @{sm-min}) and (max-width: @{sm-max})";
+@desktop: ~"only screen and (min-width: @{md-min}) and (max-width: @{md-max})";
+@large:   ~"only screen and (min-width: @{lg-min})";
+
+
+@font-face {
+  font-family: 'famfont';
+  src: url('fonts/OpenSans-Regular.ttf');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+body {
+  font-family: @font-family;
+  font-size: @font-size;
+  line-height: 1.42857143;
+  color: @text-color; //color: #333;
+  background-color: #fff;
+  margin: 0;
+  @media @phone{
+    font-size: @font-size -5;
+  }
+
+}
+
+hr{
+  background-color: #858ba523;
+  height: 1px;
+  border: 0;
+}
+
+.container {
+  padding-left: 100px;
+  padding-right: 100px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+
+#navBar {
+  .container();
+  //text-align:right;
+  height: 60px;
+  padding-top: 10px;
+  padding-bottom: 5px;
+  padding-right: 50px;
+
+  a {
+    color: @text-color;
+    margin-right: 30px;
+    //margin-left: 20px;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+
+  @media @phone {
+    a{ display: none}
+    #home{ display: block}
+    button{ display: none }
+    #menu{ display: block }
+  }
+
+  @media (max-width: 1015px) {
+    a{ display: none}
+    #home{ display: block}
+    #menu{ display: block }
+  }
+
+  @media (min-width: 1016px) {
+    #menu{ display: none }
+  }
+}
+
+#imageHeader {
+  text-align: center;
+  padding: 50px;
+  background-image: url("/computest2/assets/img/OC Site005b.png");
+  background-position: center;
+  background-size: cover;
+  //background-image: url("/img/OC Site005b.png");
+  color: #ffffff;
+
+  #bigText {
+    padding: 30px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-size: 3.6em;
+  }
+
+
+}
+
+
+footer{
+  .center();
+  .container();
+  background-color: #35373f;
+  color: #6E748C;
+  padding-bottom: 20px;
+  padding-top: 35px;
+
+
+  a{
+    color: @accent;
+    text-decoration: none;
+  }
+
+  hr{
+    margin: 20px;
+  }
+
+
+
+  [class^="flaticon-"]:before, [class*=" flaticon-"]:before,
+  [class^="flaticon-"]:after, [class*=" flaticon-"]:after {
+    font-size: 15px;
+  }
+}
+//.whiteDiv {
+//  .container();
+//  background-color: white;
+//  min-height: 100px;
+//  padding-top: 20px;
+//}
+
+.whiteDiv {
+  .container();
+  background-color: white;
+  min-height: 100px;
+  padding-top: 20px;
+
+  //.bolder{
+  //  font-weight: bold;
+  //}
+
+  div {
+    padding-top: 25px;
+  }
+
+}
+
+.greyDiv {
+  .whiteDiv();
+  background-color: #edeff3;
+
+}
+
+.center {
+  text-align: center;
+}
+
+.center-both{
+  //padding: 70px 0;
+  text-align: center;
+  display:table-cell;
+  vertical-align: middle;
+}
+
+.medText {
+  margin-top: 35px;
+  margin-bottom: 40px;
+  font-size: @font-size + 4;
+}
+
+.responsive {
+  height: @response-image-height;
+  width: auto;
+
+  @media @xs-min and (max-width: 400px) {
+    height: @response-image-height *0.5;
+  }
+
+  @media (max-width: 401px) and @xs-max {
+    height: @response-image-height *0.7;
+  }
+
+  @media @tablet {
+    height: @response-image-height *0.7;
+  }
+}
+
+.partners {
+  height: 70px;
+  width: auto;
+
+}
+
+.partners-width{
+  width: 100px;
+  height: auto;
+}
+
+.dot{
+  width: @dot-width;
+  height: @dot-height;
+  background: #858ba5;
+  margin: @dot-width/2;
+  //float: right;
+
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+}
+
+.dot :active{
+  background: @accent;
+}
+
+.circle {
+  width: @circle-width;
+  height: @circle-height;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  top: -50px;
+  left: calc(~'50% - (@{circle-width}/2)');
+  background: #4eb2cf;
+  border: 5px solid white;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+}
+
+.bolder {
+  font-weight: bold;
+}
+
+#blogSection{
+  color: #858ba5;
+}
+
+#next {
+  color: @accent;
+  font-weight: bold;
+}
+
+.sectionTitle {
+  font-size: @font-size * 2;
+  text-align: center;
+}
+
+.button {
+  background-color: @accent;
+  padding: 8px;
+  padding-right: 25px;
+  padding-left: 25px;
+  color: #ffffff;
+  border: 2px solid @accent;
+  font-size: 0.8em;
+  text-transform: uppercase;
+
+  -webkit-transition: all .3s;
+  -moz-transition: all .3s;
+  transition: all .3s;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+
+.button:hover {
+  background: #ffffff;
+  border: 2px solid @accent;
+  color: @accent;
+}
+
+.button-border {
+  .button();
+  border-color: @accent;
+  background: none;
+  color: @accent;
+}
+
+.button-border:hover{
+  color: white;
+  background-color: @accent;
+}
+
+.bolderBlue {
+  .bolder();
+  color: #4eb2cf;
+  padding-top: 0;
+}
+
+.whiteCard{
+  background: white;
+  text-align: center;
+
+  i{
+    color: #fff;
+    text-align: center;
+  }
+}
+
+.grid-container {
+  width: 100%;
+  max-width: 1200px;
+  padding: @divPad;
+  //text-align: center;
+}
+
+/*-- our cleafix hack -- */
+.row:before,
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+[class*='item-'] {
+  float: left;
+  min-height: 1px;
+  width: 16.66%;
+  padding: 12px;
+  //background-color: #FFDCDC;
+}
+
+.item-1{
+  width: 5%;
+}
+
+.item-2 {
+  padding-right: 5px;
+  padding-left: 5px;
+  width: 18%;
+
+  @media @phone {
+    width: 80%;
+  }
+
+  @media @tablet {
+    width: 25%;
+  }
+}
+
+.item-3 {
+  width: 22%;
+  @media @phone {
+    width: 90%;
+  }
+
+  @media @tablet {
+    width: 45%;
+  }
+
+}
+
+.item-4 {
+  width: 25%;
+  margin-right: 10px;
+  margin-left: 10px;
+  @media @phone {
+    width: 90%;
+    margin-bottom: 40px;
+  }
+
+  @media @tablet {
+    width: 25%;
+  }
+
+}
+
+.item-6 {
+  width: 45%;
+
+  @media @phone {
+    width: 90%;
+
+  }
+}
+
+.item-10 {
+  width: 83%;
+}

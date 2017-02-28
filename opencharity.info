@@ -1,0 +1,13 @@
+name = Open Charity
+description = Simple theme to show the compucorp page
+core = 7.x
+engine = phptemplate
+
+regions[header] = Header
+regions[sidebar_first] = Right sidebar
+regions[content] = Content
+regions[footer] = Footer
+
+
+features[] = name
+features[] = main_menu
