@@ -1,10 +1,10 @@
-<link rel="stylesheet/less" type="text/css" href="<?php print $base_path?>/<?php print $directory;?>/style/style.less">
-<link rel="stylesheet/less" type="text/css" href="<?php print $base_path?>/<?php print $directory;?>/assets/font/flaticon.css">
+<link rel="stylesheet/less" type="text/css" href="<?php print path_to_theme();?>/style/style.less">
+<link rel="stylesheet" type="text/css" href="<?php print path_to_theme();?>/assets/font/flaticon.css">
   <header id="navBar">
     <div class="grid-container" style="padding: 0">
 
       <div class="item-6">
-        <a id="home" href="/"><img src="<?php print $base_path?>/<?php print $directory;?>/assets/img/OpenCharity.png" alt="logo" width="140" height="auto"></a>
+        <a id="home" href="/"><img src="<?php print path_to_theme();?>/assets/img/OpenCharity.png" alt="logo" width="140" height="auto"></a>
       </div>
 
       <div class="item-6" style="text-align: right">
@@ -56,7 +56,7 @@
     <div class="grid-container" style="padding: 0">
       <div class="row">
         <div class="item-4">
-          <div><img class="responsive" src="<?php print $base_path?>/<?php print $directory;?>/assets/img/icon1.png"></div>
+          <div><img class="responsive" src="<?php print path_to_theme();?>/assets/img/icon1.png"></div>
           <div class="bolder">WE DO MEETINGS</div>
           <div><span>We organise our meetings throug the OpenCharity MeetUp group</span></div>
           <div>
@@ -65,7 +65,7 @@
         </div>
 
         <div class="item-4">
-          <div><img class="responsive" src="<?php print $base_path?>/<?php print $directory;?>/assets/img/icon2.png"></div>
+          <div><img class="responsive" src="<?php print path_to_theme();?>/assets/img/icon2.png"></div>
           <div class="bolder">WE COMMUNICATE</div>
           <div><span>We have a Wiki group set up to share tools and documents</span></div>
           <div>
@@ -74,7 +74,7 @@
         </div>
 
         <div class="item-4">
-          <div><img class="responsive" src="<?php print $base_path?>/<?php print $directory;?>/assets/img/icon3.png"></div>
+          <div><img class="responsive" src="<?php print path_to_theme();?>/assets/img/icon3.png"></div>
           <div class="bolder">WE DO MEETINGS</div>
           <div><span>We organise our meetings throug the OpenCharity MeetUp group</span></div>
           <div>
@@ -128,23 +128,23 @@
 
     <div class="row center">
       <div class="item-2">
-        <div><img class="partners" src="<?php print $base_path?>/<?php print $directory;?>/assets/img/icon8.png"></div>
+        <div><img class="partners" src="<?php print path_to_theme();?>/assets/img/icon8.png"></div>
       </div>
 
       <div class="item-2">
-        <div><img class="partners-width" src="<?php print $base_path?>/<?php print $directory;?>/assets/img/icon7.png"></div>
+        <div><img class="partners-width" src="<?php print path_to_theme();?>/assets/img/icon7.png"></div>
       </div>
 
       <div class="item-2">
-        <div><img class="partners-width" src="<?php print $base_path?>/<?php print $directory;?>/assets/img/icon6.png"></div>
+        <div><img class="partners-width" src="<?php print path_to_theme();?>/assets/img/icon6.png"></div>
       </div>
 
       <div class="item-2">
-        <div><img class="partners" src="<?php print $base_path?>/<?php print $directory;?>/assets/img/icon5.png"></div>
+        <div><img class="partners" src="<?php print path_to_theme();?>/assets/img/icon5.png"></div>
       </div>
 
       <div class="item-2">
-        <div><img class="partners" src="<?php print $base_path?>/<?php print $directory;?>/assets/img/icon4.png"></div>
+        <div><img class="partners" src="<?php print path_to_theme();?>/assets/img/icon4.png"></div>
       </div>
     </div>
 
@@ -226,4 +226,4 @@
   </footer>
 
 
-  <script src="<?php print $base_path?>/<?php print $directory;?>/js/less.min.js" type="application/javascript"></script>
+  <script src="<?php print path_to_theme();?>/js/less.min.js" type="application/javascript"></script>
